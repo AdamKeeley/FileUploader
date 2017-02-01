@@ -16,7 +16,7 @@ namespace FileUploader
         private void btnBrowse_Click(object sender, EventArgs e)
         {
             CommonOpenFileDialog dialog = new CommonOpenFileDialog();
-            dialog.InitialDirectory = "N:\\Academic-Services\\ISS\\IRC-Data-Services";
+            dialog.InitialDirectory = "N:\\Academic-Services\\ISS\\IRC-Data-Services\\Suppliers\\CPRD\\Lookups\\Lookups_2016_08";
             dialog.IsFolderPicker = true;
             if (dialog.ShowDialog() == CommonFileDialogResult.Ok)
             {

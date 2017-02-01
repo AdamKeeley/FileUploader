@@ -74,7 +74,7 @@ namespace FileUploader
             // 
             this.lblConfirmSourceDirectory.AutoSize = true;
             this.lblConfirmSourceDirectory.Location = new System.Drawing.Point(12, 47);
-            this.lblConfirmSourceDirectory.MaximumSize = new System.Drawing.Size(400, 0);
+            this.lblConfirmSourceDirectory.MaximumSize = new System.Drawing.Size(380, 0);
             this.lblConfirmSourceDirectory.Name = "lblConfirmSourceDirectory";
             this.lblConfirmSourceDirectory.Size = new System.Drawing.Size(0, 13);
             this.lblConfirmSourceDirectory.TabIndex = 3;
