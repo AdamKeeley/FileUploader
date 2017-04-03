@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="SSISDBDataSet" targetNamespace="http://tempuri.org/SSISDBDataSet.xsd" xmlns:mstns="http://tempuri.org/SSISDBDataSet.xsd" xmlns="http://tempuri.org/SSISDBDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="SSISDBConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="SSISDBConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.FileUploader.Properties.Settings.GlobalReference.Default.SSISDBConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="event_messagesTableAdapter" GeneratorDataComponentClassName="event_messagesTableAdapter" Name="event_messages" UserDataComponentName="event_messagesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SSISDBConnectionString (Settings)" DbObjectName="SSISDB.catalog.event_messages" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT event_message_id, operation_id, message_time, message_type, message_source_type, message, extended_info_id, package_name, event_name, message_source_name, message_source_id, subcomponent_name, package_path, execution_path, threadID, message_code FROM catalog.event_messages</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="event_message_id" DataSetColumn="event_message_id" />
+              <Mapping SourceColumn="operation_id" DataSetColumn="operation_id" />
+              <Mapping SourceColumn="message_time" DataSetColumn="message_time" />
+              <Mapping SourceColumn="message_type" DataSetColumn="message_type" />
+              <Mapping SourceColumn="message_source_type" DataSetColumn="message_source_type" />
+              <Mapping SourceColumn="message" DataSetColumn="message" />
+              <Mapping SourceColumn="extended_info_id" DataSetColumn="extended_info_id" />
+              <Mapping SourceColumn="package_name" DataSetColumn="package_name" />
+              <Mapping SourceColumn="event_name" DataSetColumn="event_name" />
+              <Mapping SourceColumn="message_source_name" DataSetColumn="message_source_name" />
+              <Mapping SourceColumn="message_source_id" DataSetColumn="message_source_id" />
+              <Mapping SourceColumn="subcomponent_name" DataSetColumn="subcomponent_name" />
+              <Mapping SourceColumn="package_path" DataSetColumn="package_path" />
+              <Mapping SourceColumn="execution_path" DataSetColumn="execution_path" />
+              <Mapping SourceColumn="threadID" DataSetColumn="threadID" />
+              <Mapping SourceColumn="message_code" DataSetColumn="message_code" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="SSISDBDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="SSISDBDataSet" msprop:Generator_UserDSName="SSISDBDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="event_messages" msprop:Generator_TableClassName="event_messagesDataTable" msprop:Generator_TableVarName="tableevent_messages" msprop:Generator_TablePropName="event_messages" msprop:Generator_RowDeletingName="event_messagesRowDeleting" msprop:Generator_RowChangingName="event_messagesRowChanging" msprop:Generator_RowEvHandlerName="event_messagesRowChangeEventHandler" msprop:Generator_RowDeletedName="event_messagesRowDeleted" msprop:Generator_UserTableName="event_messages" msprop:Generator_RowChangedName="event_messagesRowChanged" msprop:Generator_RowEvArgName="event_messagesRowChangeEvent" msprop:Generator_RowClassName="event_messagesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="event_message_id" msprop:Generator_ColumnVarNameInTable="columnevent_message_id" msprop:Generator_ColumnPropNameInRow="event_message_id" msprop:Generator_ColumnPropNameInTable="event_message_idColumn" msprop:Generator_UserColumnName="event_message_id" type="xs:long" />
+              <xs:element name="operation_id" msprop:Generator_ColumnVarNameInTable="columnoperation_id" msprop:Generator_ColumnPropNameInRow="operation_id" msprop:Generator_ColumnPropNameInTable="operation_idColumn" msprop:Generator_UserColumnName="operation_id" type="xs:long" />
+              <xs:element name="message_time" msdata:DataType="System.DateTimeOffset" msprop:Generator_ColumnVarNameInTable="columnmessage_time" msprop:Generator_ColumnPropNameInRow="message_time" msprop:Generator_ColumnPropNameInTable="message_timeColumn" msprop:Generator_UserColumnName="message_time" type="xs:anyType" />
+              <xs:element name="message_type" msprop:Generator_ColumnVarNameInTable="columnmessage_type" msprop:Generator_ColumnPropNameInRow="message_type" msprop:Generator_ColumnPropNameInTable="message_typeColumn" msprop:Generator_UserColumnName="message_type" type="xs:short" />
+              <xs:element name="message_source_type" msprop:Generator_ColumnVarNameInTable="columnmessage_source_type" msprop:Generator_ColumnPropNameInRow="message_source_type" msprop:Generator_ColumnPropNameInTable="message_source_typeColumn" msprop:Generator_UserColumnName="message_source_type" type="xs:short" minOccurs="0" />
+              <xs:element name="message" msprop:Generator_ColumnVarNameInTable="columnmessage" msprop:Generator_ColumnPropNameInRow="message" msprop:Generator_ColumnPropNameInTable="messageColumn" msprop:Generator_UserColumnName="message" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="extended_info_id" msprop:Generator_ColumnVarNameInTable="columnextended_info_id" msprop:Generator_ColumnPropNameInRow="extended_info_id" msprop:Generator_ColumnPropNameInTable="extended_info_idColumn" msprop:Generator_UserColumnName="extended_info_id" type="xs:long" minOccurs="0" />
+              <xs:element name="package_name" msprop:Generator_ColumnVarNameInTable="columnpackage_name" msprop:Generator_ColumnPropNameInRow="package_name" msprop:Generator_ColumnPropNameInTable="package_nameColumn" msprop:Generator_UserColumnName="package_name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="260" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="event_name" msprop:Generator_ColumnVarNameInTable="columnevent_name" msprop:Generator_ColumnPropNameInRow="event_name" msprop:Generator_ColumnPropNameInTable="event_nameColumn" msprop:Generator_UserColumnName="event_name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1024" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="message_source_name" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnmessage_source_name" msprop:Generator_ColumnPropNameInRow="message_source_name" msprop:Generator_ColumnPropNameInTable="message_source_nameColumn" msprop:Generator_UserColumnName="message_source_name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="message_source_id" msprop:Generator_ColumnVarNameInTable="columnmessage_source_id" msprop:Generator_ColumnPropNameInRow="message_source_id" msprop:Generator_ColumnPropNameInTable="message_source_idColumn" msprop:Generator_UserColumnName="message_source_id" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="38" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="subcomponent_name" msprop:Generator_ColumnVarNameInTable="columnsubcomponent_name" msprop:Generator_ColumnPropNameInRow="subcomponent_name" msprop:Generator_ColumnPropNameInTable="subcomponent_nameColumn" msprop:Generator_UserColumnName="subcomponent_name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="package_path" msprop:Generator_ColumnVarNameInTable="columnpackage_path" msprop:Generator_ColumnPropNameInRow="package_path" msprop:Generator_ColumnPropNameInTable="package_pathColumn" msprop:Generator_UserColumnName="package_path" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="execution_path" msprop:Generator_ColumnVarNameInTable="columnexecution_path" msprop:Generator_ColumnPropNameInRow="execution_path" msprop:Generator_ColumnPropNameInTable="execution_pathColumn" msprop:Generator_UserColumnName="execution_path" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="threadID" msprop:Generator_ColumnVarNameInTable="columnthreadID" msprop:Generator_ColumnPropNameInRow="threadID" msprop:Generator_ColumnPropNameInTable="threadIDColumn" msprop:Generator_UserColumnName="threadID" type="xs:int" minOccurs="0" />
+              <xs:element name="message_code" msprop:Generator_ColumnVarNameInTable="columnmessage_code" msprop:Generator_ColumnPropNameInRow="message_code" msprop:Generator_ColumnPropNameInTable="message_codeColumn" msprop:Generator_UserColumnName="message_code" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:event_messages" />
+      <xs:field xpath="mstns:event_message_id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

@@ -31,6 +31,7 @@ namespace FileUploader
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Initiate));
             this.tbxSourcePath = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnInitiateBrowse = new System.Windows.Forms.Button();
@@ -53,7 +54,7 @@ namespace FileUploader
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 12);
+            this.label1.Location = new System.Drawing.Point(12, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(97, 13);
             this.label1.TabIndex = 0;
@@ -82,7 +83,7 @@ namespace FileUploader
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 46);
+            this.label2.Location = new System.Drawing.Point(12, 46);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(92, 13);
             this.label2.TabIndex = 3;
@@ -101,7 +102,7 @@ namespace FileUploader
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 79);
+            this.label3.Location = new System.Drawing.Point(12, 79);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(107, 13);
             this.label3.TabIndex = 5;
@@ -123,7 +124,7 @@ namespace FileUploader
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(546, 456);
+            this.ClientSize = new System.Drawing.Size(546, 120);
             this.Controls.Add(this.tbxServerName);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnInitiateUpload);
@@ -132,6 +133,7 @@ namespace FileUploader
             this.Controls.Add(this.btnInitiateBrowse);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tbxSourcePath);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Initiate";
             this.Text = "CPRD Data Upload";
             ((System.ComponentModel.ISupportInitialize)(this.InitiateBindingSource)).EndInit();

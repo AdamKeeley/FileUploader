@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace FileUploader
+﻿namespace FileUploader
 {
     partial class Confirm
     {
@@ -30,6 +28,7 @@ namespace FileUploader
         /// </summary>
         public void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Confirm));
             this.label1 = new System.Windows.Forms.Label();
             this.btnConfirmOK = new System.Windows.Forms.Button();
             this.btnConfirmCancel = new System.Windows.Forms.Button();
@@ -39,6 +38,10 @@ namespace FileUploader
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.tbxProgress = new System.Windows.Forms.TextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -124,12 +127,43 @@ namespace FileUploader
             this.label4.TabIndex = 8;
             this.label4.Text = "Destination database:";
             // 
+            // tbxProgress
+            // 
+            this.tbxProgress.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxProgress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.tbxProgress.Location = new System.Drawing.Point(417, 16);
+            this.tbxProgress.Multiline = true;
+            this.tbxProgress.Name = "tbxProgress";
+            this.tbxProgress.ReadOnly = true;
+            this.tbxProgress.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.tbxProgress.Size = new System.Drawing.Size(404, 157);
+            this.tbxProgress.TabIndex = 9;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToOrderColumns = true;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(15, 180);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.dataGridView1.Size = new System.Drawing.Size(806, 245);
+            this.dataGridView1.TabIndex = 10;
+            // 
+            // backgroundWorker1
+            // 
+            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
+            // 
             // Confirm
             // 
             this.AcceptButton = this.btnConfirmOK;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(400, 185);
+            this.ClientSize = new System.Drawing.Size(833, 435);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.tbxProgress);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -139,8 +173,10 @@ namespace FileUploader
             this.Controls.Add(this.btnConfirmCancel);
             this.Controls.Add(this.btnConfirmOK);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Confirm";
             this.Text = "Confirm";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -157,5 +193,8 @@ namespace FileUploader
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        public System.Windows.Forms.TextBox tbxProgress;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }

@@ -15,6 +15,7 @@ namespace FileUploader
 
         private void btnBrowse_Click(object sender, EventArgs e)
         {
+            // Opens the good file browser. Had to install 'WindowsAPICodePack' from NuGet  //
             CommonOpenFileDialog dialog = new CommonOpenFileDialog();
             dialog.InitialDirectory = "N:\\Academic-Services\\ISS\\IRC-Data-Services\\Suppliers\\CPRD\\Lookups\\Lookups_2016_08";
             dialog.IsFolderPicker = true;
@@ -26,6 +27,8 @@ namespace FileUploader
 
         private void tbxServerName_Leave(object sender, EventArgs e)
         {
+            // Clears and populates the database combo box with available databases from instance specified     //
+            // Calls 'populateDatabase' method to do so                                                         //
             if (string.IsNullOrEmpty(tbxServerName.Text))
             {
                 cbxDatabaseName.ResetText();
@@ -40,6 +43,8 @@ namespace FileUploader
 
         private void btnInitiateUpload_Click(object sender, EventArgs e)
         {
+            // Packs the three variable options into a string array,    //
+            // opens and and passes it through to the 'Confirm' form    //
             string[] varOptions = {tbxSourcePath.Text, tbxServerName.Text, cbxDatabaseName.Text};
             Confirm confirm = new Confirm();
             confirm.lblConfirmSourceDirectory.Text = varOptions[0].ToString();
@@ -50,6 +55,8 @@ namespace FileUploader
 
         private void populateDatabase(string server)
         {
+            // Connects to the instance specified in tbxServerName and queries for database names.  //
+            // Loads the query into a list that is used to populate the cbxDatabaseName combo box.  //
             SqlConnectionStringBuilder builtConnection = new SqlConnectionStringBuilder();
             builtConnection["Data Source"] = server;
             builtConnection["Trusted_Connection"] = "yes";
